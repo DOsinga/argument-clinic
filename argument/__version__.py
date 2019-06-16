@@ -1,0 +1,8 @@
+__title__ = 'argument-clinic'
+__description__ = 'Argument clinic makes creates a command line interface out of your main() so you don\'t have to.'
+__url__ = 'https://github.com/DOsinga/argument-clinic'
+__version__ = '0.1'
+__author__ = 'Douwe Osinga'
+__author_email__ = 'douwe.osinga@gmail.com'
+__license__ = 'MIT License'
+__copyright__ = 'Copyright 2019 Douwe Osinga'
