@@ -16,7 +16,7 @@ def main(input_file : str, *, scale : float = 125, fps : int = 30):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Create a movie based that has droste aspects.')
-    parser.add_argument('--input_file', type=str, default='beach.jpg')
+    parser.add_argument('input_file', type=str)
     parser.add_argument('--scale', type=float, default=125)
     parser.add_argument('--fps', type=float, default=30)
 
