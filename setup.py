@@ -18,7 +18,7 @@ if sys.argv[-1] == 'publish':
 
 
 about = {}
-with open(os.path.join(here, 'arguments', '__version__.py'), 'r', 'utf-8') as f:
+with open(os.path.join(here, 'argument', '__version__.py'), 'r', 'utf-8') as f:
     exec(f.read(), about)
 
 with open('README.md', 'r', 'utf-8') as f:
@@ -33,17 +33,18 @@ setup(
     author=about['__author__'],
     author_email=about['__author_email__'],
     url=about['__url__'],
-    package_data={'': ['LICENSE', 'NOTICE'], 'requests': ['*.pem']},
-    package_dir={'requests': 'requests'},
+    package_data={'': ['LICENSE', 'README.md']},
+    package_dir={'argument': 'argument'},
     include_package_data=True,
     python_requires=">=3.6",
-    py_modules=['mypackage'],
+    packages=['argument'],
     license=about['__license__'],
     zip_safe=False,
     classifiers=[
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: Apache Software License',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
@@ -51,7 +52,7 @@ setup(
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
-    requires=['docstring-parser'],
+    install_requires=['docstring-parser'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
 )
